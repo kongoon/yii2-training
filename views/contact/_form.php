@@ -7,6 +7,7 @@ use yii\bootstrap\ActiveForm;
 use app\models\Province;
 use app\models\District;
 use app\models\Tambon;
+use yii\widgets\Pjax;
 
 
 /* @var $this yii\web\View */
@@ -29,9 +30,17 @@ if($model->isNewRecord){
     $tambon_list = ArrayHelper::map(Tambon::find()->where(['district_id'=>$district])->orderBy('tambon_name ASC')->all(),'id','tambon_name');
 }
 ?>
-
+<?php
+$this->registerJs('
+    $("document").ready(function(){
+        $("#new_contact").on("pjax:end",function(){
+            $.pjax.reload({container:"#contact"});
+        });
+    });
+        ');
+?>
 <div class="contact-form">
-
+<?php Pjax::begin(['id'=>'new_contact'])?>
     <?php $form = ActiveForm::begin([
         'layout'=>'horizontal',
         'fieldConfig'=>[
@@ -99,6 +108,6 @@ if($model->isNewRecord){
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
-    <?php ActiveForm::end(); ?>
-
+    <?php ActiveForm::end() ?>
+<?php Pjax::end()?>
 </div>
