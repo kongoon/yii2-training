@@ -34,12 +34,13 @@ class Contact extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['fullname', 'address', 'tambon_id', 'zipcode', 'email', 'tel'], 'required'],
+            [['fullname', 'address', 'tambon_id', 'zipcode', 'email', 'tel', 'lat', 'lng'], 'required'],
             [['address'], 'string'],
             [['tambon_id'], 'integer'],
             [['created'], 'safe'],
             [['fullname', 'email'], 'string', 'max' => 255],
             [['email'],'email'],
+            [['lat','lng'],'string','max'=>45],
             [['zipcode'], 'string', 'max' => 5],
             [['tel'], 'string', 'max' => 20]
         ];
@@ -58,6 +59,8 @@ class Contact extends \yii\db\ActiveRecord
             'zipcode' => 'รหัสไปรษณีย์',
             'email' => 'อีเมลล์',
             'tel' => 'เบอร์โทร',
+            'lat'=>'ละติจูด',
+            'lng'=>'ลองกิจูด',
             'created' => 'บันทึกเมื่อ',
         ];
     }

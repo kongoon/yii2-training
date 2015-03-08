@@ -101,6 +101,10 @@ $this->registerJs('
     <?= $form->field($model, 'email')->textInput(['maxlength' => 255]) ?>
 
     <?= $form->field($model, 'tel')->textInput(['maxlength' => 20]) ?>
+    
+    <?= $form->field($model, 'lat')->textInput(['maxlength' => 45]) ?>
+    
+    <?= $form->field($model, 'lng')->textInput(['maxlength' => 45]) ?>
 
 
 

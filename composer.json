@@ -19,7 +19,8 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
         "kongoon/yii2-theme-material": "*",
-        "kartik-v/yii2-grid": "dev-master"
+        "kartik-v/yii2-grid": "dev-master",
+        "2amigos/yii2-google-maps-library": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

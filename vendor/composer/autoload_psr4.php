@@ -17,6 +17,9 @@ return array(
     'kongoon\\theme\\material\\' => array($vendorDir . '/kongoon/yii2-theme-material'),
     'kartik\\grid\\' => array($vendorDir . '/kartik-v/yii2-grid'),
     'kartik\\base\\' => array($vendorDir . '/kartik-v/yii2-krajee-base'),
+    'dosamigos\\google\\maps\\' => array($vendorDir . '/2amigos/yii2-google-maps-library'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
+    'GuzzleHttp\\Stream\\' => array($vendorDir . '/guzzlehttp/streams/src'),
+    'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
 );
