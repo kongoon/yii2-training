@@ -5,8 +5,8 @@ use app\models\Contact;
 
 class MapsController extends Controller{
     public function actionMaps(){
-        $maps = Contact::find();
-        return $this->render('maps',['maps'=>$maps]);
+        $contacts = Contact::find()->each();
+        return $this->render('maps',['contacts'=>$contacts]);
     }
 }
 
