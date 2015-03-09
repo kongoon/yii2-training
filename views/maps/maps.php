@@ -16,7 +16,7 @@ $map = new Map([
         'width' => '100%',
         'height' => '500',
     ]);
-foreach ($maps as $s) {
+foreach ($contacts as $s) {
     //echo $s->school_name;
     $coords = new LatLng(['lat' => $s->lat, 'lng' => $s->lng]);//กำหนด lat lng
     // สร้าง marker ในแผนที่
