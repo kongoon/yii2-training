@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2015 at 07:04 AM
+-- Generation Time: Mar 09, 2015 at 08:46 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -8627,6 +8627,8 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `zipcode` varchar(5) NOT NULL COMMENT 'รหัสไปรษณีย์',
   `email` varchar(255) NOT NULL COMMENT 'อีเมลล์',
   `tel` varchar(20) NOT NULL COMMENT 'เบอร์โทร',
+  `lat` varchar(45) NOT NULL COMMENT 'ละติจูด',
+  `lng` varchar(45) NOT NULL COMMENT 'ลองกิจูด',
   `created` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'บันทึกเมื่อ',
   PRIMARY KEY (`id`),
   KEY `tambon_id` (`tambon_id`)
@@ -8636,9 +8638,9 @@ CREATE TABLE IF NOT EXISTS `contact` (
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`id`, `fullname`, `address`, `tambon_id`, `zipcode`, `email`, `tel`, `created`) VALUES
-(1, 'มานพ กองอุ่น', '60 หมู่ 9', 341405, '34140', 'kongoon@gmail.com', '0833704413', '2015-02-17 11:38:07'),
-(2, 'ณภาภัช กองอุ่น', '123 หมู่ 4', 103605, '12345', 'test@test.com', '123456', '2015-02-17 17:16:57');
+INSERT INTO `contact` (`id`, `fullname`, `address`, `tambon_id`, `zipcode`, `email`, `tel`, `lat`, `lng`, `created`) VALUES
+(1, 'มานพ กองอุ่น', '60 หมู่ 9', 341405, '34140', 'kongoon@gmail.com', '0833704413', '15.255223', '104.831955', '2015-02-17 11:38:07'),
+(2, 'ณภาภัช กองอุ่น', '123 หมู่ 4', 103605, '12345', 'test@test.com', '123456', '15.514246', '104.724120', '2015-02-17 17:16:57');
 
 -- --------------------------------------------------------
 
